@@ -1,4 +1,13 @@
 $(document).ready(function(){
+    // header
+    // click search -> keyword popup open
+    $('#schBox').on('focus', function() {
+        $('.search__keyword-wrap').show();
+    });
+    $('#schBox').on('blur', function() {
+        $('.search__keyword-wrap').hide();
+    });
+
     // footer
     // 사업자 정보 열고 닫기
     $('.btn-company').on('click', function() {
@@ -14,7 +23,6 @@ $(document).ready(function(){
 
     // common
     // top button
-    
 	$(window).scroll(function () { // 일정 스크롤 이후 버튼 보이기
 		if ($(this).scrollTop() > 300) {
 			$('#btn-top').fadeIn();
