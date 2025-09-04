@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -142,7 +144,7 @@
                         <div class="footer__list">
                             <p class="title">회사</p>
                             <a href="#">회사 소개</a>
-                            <a href="#">
+                            <a class="new" href="#">
                                 <span>인재채용</span>
                                 <svg width="1em" height="1em" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="NEW" class="fig-18yedlc">
                                     <circle cx="7" cy="7" r="7" fill="currentColor"></circle>
@@ -189,45 +191,49 @@
                 </div>
                 <!-- // end footer-top -->
                 <div class="copyright-wrap">
-                    <a href="javascript:void(0);" title="리디(주) 사업자 정보 열기">
+                    <a class="btn-company" href="javascript:void(0);" title="리디(주) 사업자 정보 열기">
                         <span>리디(주) 사업자 정보</span>
-                        <svg width="1em" height="1em" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-4dsd3s">
+                        <svg viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-4dsd3s">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M2.53375 0.920861C2.33849 1.11612 2.33849 1.43271 2.53375 1.62797L5.4052 4.49941L2.53375 7.37086C2.33849 7.56612 2.33849 7.88271 2.53375 8.07797C2.72901 8.27323 3.0456 8.27323 3.24086 8.07797L6.46586 4.85297C6.55963 4.7592 6.6123 4.63202 6.6123 4.49941C6.6123 4.36681 6.55963 4.23963 6.46586 4.14586L3.24086 0.920861C3.0456 0.725599 2.72901 0.725599 2.53375 0.920861Z" fill="currentColor"></path>
                         </svg>
                     </a>
-                    <dl class="company-content">
-                        <div>
-                            <dt>대표자</dt>
-                            <dd>배기식</dd>
-                        </div>
-                        <div>
-                            <dt>사업자 등록번호</dt>
-                            <dd>120-87-27435</dd>
-                        </div>
-                        <div>
-                            <dt>통신판매업 신고번호</dt>
-                            <dd>제 2009-서울강남 35-02139호</dd>
-                        </div>
-                        <div>
-                            <dt>이메일</dt>
-                            <dd>help@ridi.com</dd>
-                        </div>
-                        <div>
-                            <dt>대표전화</dt>
-                            <dd>1644-0331</dd>
-                        </div>
-                        <div>
-                            <dt>주소</dt>
-                            <dd>서울시 강남구 역삼동 702-28 어반벤처빌딩 4, 10, 11층(테헤란로 325)</dd>
-                        </div>
-                    </dl>
-                    <div class="company-content">
-                        <a href="#">이용약관</a>
-                        <a href="#" style="font-weight: 700;">개인정보 처리방침</a>
-                        <a href="#">청소년보호정책</a>
-                        <a href="#">사업자정보확인</a>
+                    <div class="company-wrap">
+                        <dl class="company-content">
+                            <div class="company-item">
+                                <dt>대표자</dt>
+                                <dd>배기식</dd>
+                            </div>
+                            <div class="company-item">
+                                <dt>사업자 등록번호</dt>
+                                <dd>120-87-27435</dd>
+                            </div>
+                            <div class="company-item">
+                                <dt>통신판매업 신고번호</dt>
+                                <dd>제 2009-서울강남 35-02139호</dd>
+                            </div>
+                        </dl>
+                        <dl class="company-content">
+                            <div class="company-item">
+                                <dt>이메일</dt>
+                                <dd>help@ridi.com</dd>
+                            </div>
+                            <div class="company-item">
+                                <dt>대표전화</dt>
+                                <dd>1644-0331</dd>
+                            </div>
+                            <div class="company-item">
+                                <dt>주소</dt>
+                                <dd>서울시 강남구 역삼동 702-28 어반벤처빌딩 4, 10, 11층(테헤란로 325)</dd>
+                            </div>
+                        </dl>
                     </div>
-                    <div class="copyright"><b>©</b>RIDI Corp.</div>
+                    <div class="company-content">
+                        <a href="#" class="company-item">이용약관</a>
+                        <a href="#" class="company-item" style="font-weight: 700;">개인정보 처리방침</a>
+                        <a href="#" class="company-item">청소년보호정책</a>
+                        <a href="#" class="company-item">사업자정보확인</a>
+                    </div>
+                    <div class="copyright"><b>©</b> RIDI Corp.</div>
                 </div>
                 <!-- // end copyright-wrap -->
             </div>
@@ -236,5 +242,13 @@
         <!-- // end footer-wrap -->
     </footer>
     <!-- // end footer -->
+
+    <!-- start top button -->
+     <a id="btn-top" href="javascript:void(0);">
+        <svg width="1em" height="1em" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="맨 위로 스크롤">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.582 13.436a.8.8 0 01-1.164-1.098l9-9.54a.8.8 0 011.164 0l9 9.54a.8.8 0 11-1.164 1.098L15.8 5.36v20.483a.8.8 0 11-1.6 0V5.36l-7.618 8.075z" fill="currentColor"></path>
+        </svg>
+    </a>
+    <!-- // end top button -->
 </body>
 </html>

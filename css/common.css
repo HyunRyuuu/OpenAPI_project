@@ -55,9 +55,31 @@ body {font-family: 'Pretendard Variable', 'sans-serif' !important; font-size: 14
 .footer-wrap {margin-top: 100px; border-top: 1px solid #f0f0f0;}
 .footer-inner {width: 1170px; margin: 0 auto; padding: 41px 26px 20px;}
 .footer-top {display: flex; align-items: flex-start; justify-content: space-between;}
-.footer-top .footer__list-wrap {}
+.footer-top .footer__list-wrap {display: flex; width: calc(100% - 260px);}
+.footer-top .footer__list {width: calc(100% / 4);}
+.footer-top .footer__list a {display: flex; align-items: stretch; width: fit-content;}
+.footer-top .footer__list a:not(.icon-type, .title) {margin: 12px 0 0; font-size: 13px; color: #787878; line-height: 16px;}
+.footer-top .footer__list a.new svg {margin: 0 0 0 4px; font-size: 14px; color: #1E9EFF;}
+.footer-top .footer__list .icon-type,
+.footer-top .footer__list .title {font-weight: 700; font-size: 13px; color: #787878; line-height: 16px;}
+.footer-top .footer__list .icon-type {display: flex; align-items: center; margin: 0 0 20px;}
+.footer-top .footer__list .icon-type svg {margin: 0 6px 0 0;}
+.footer-top .footer__list .title {margin: 0 0 16px;}
 
 .footer-top .sns__util {display: flex; gap: 10px; align-items: center;}
 .footer-top .sns__util a {display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; color: #787878; border: 1px solid #e6e6e6; border-radius: 100%; box-sizing: border-box;}
 
 .copyright-wrap {margin: 60px 0 20px;}
+.btn-company {display: inline-block; margin: 0 0 10px; font-weight: 700; font-size: 12px; color: #787878; line-height: 14px;}
+.btn-company svg {width: 9px; height: 9px; margin: 0 0 0 5px; transform: rotate(90deg);}
+.btn-company.open svg {transform: rotate(-90deg);}
+.company-wrap {display: none;}
+.company-content {display: flex; align-items: center;}
+.company-content .company-item {display: inline-flex; align-items: center; justify-content: center; position: relative; font-size: 11px; color: #787878; line-height: 19px;}
+.company-content .company-item:not(:first-child):before {content: ''; display: inline-block; width: 1px; height: 9px; margin: 2px 6px; background: rgb(240, 240, 240);}
+.company-content .company-item dd {margin: 0 0 0 5px;}
+.copyright-wrap .copyright {margin: 16px 0 0; font-weight: 500; font-size: 11px; color: #787878; line-height: 13px;}
+
+/* top button */
+#btn-top {display: none; position: fixed; right: 30px; bottom: 30px; width: 58px; height: 58px; border: 1px solid #e6e6e6; border-radius: 100%; background: #fff; font-size: 0; z-index: 999;}
+#btn-top svg {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 30px; height: 30px;}
