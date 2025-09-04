@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서 전자책 - 리디</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <!-- start header -->
+    <header id="header">
+        <div class="header-wrap">
+            <div class="header-inner">
+                <!-- start header top -->
+                <div class="header-top">
+                    <a href="#logo" class="logo">
+                        <svg viewBox="0 0 66 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-1so0vu4">
+                            <path d="M20.29 8.281v.063c0 3.306-1.612 5.8-4.546 7.08l5.608 8.155h-6.8l-4.778-7.098H5.787v7.103H0V.52h11.444c5.457 0 8.845 2.974 8.845 7.76zm-9.167 3.454c2.076 0 3.317-1.45 3.317-3.138v-.062c0-2.258-1.853-3.17-3.411-3.17H5.787v6.37h5.336zM24.37.52h5.786v23.063h-5.786V.52zm20.668 0H34.39v23.063h10.65c7.117 0 10.73-4.85 10.73-11.53v-.061C55.77 5.343 52.156.52 45.04.52zm4.724 11.592c0 3.697-1.63 6.448-5.384 6.448h-4.202V5.54h4.202c3.755 0 5.385 2.774 5.385 6.511v.063zM58.94.52h5.786v23.063H58.94V.52z" fill="#1E9EFF"></path>
+                        </svg>
+                        <span class="blind">리디북스 로고</span>
+                    </a>
+                    <div class="header__util">
+                        <div class="search__box-wrap">
+                            <label for="schBox" class="search__box">
+                                <svg width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="fig-1hsho1o">
+                                    <path fill-rule="evenodd" d="M13.28 8.18a5.1 5.1 0 11-10.2 0 5.1 5.1 0 0110.2 0zm-1.031 5.069a6.5 6.5 0 11.991-.989l4.695 4.695a.7.7 0 11-.99.99l-4.696-4.696z"></path>
+                                </svg>
+                                <span class="blind">검색</span>
+                                <input id="schBox" type="text">
+                            </label>
+                        </div>
+                        <ul class="header__util-list">
+                            <li><a href="#">회원가입</a></li>
+                            <li><a href="#">로그인</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- // end header top -->
+
+                <!-- start header navi -->
+                <div class="header__navi-wrap">
+                    <nav id="gnb">
+                        <ul class="gnb-wrap">
+                            <li class="gnb-list active">
+                                <a href="#">웹툰</a>
+                            </li>
+                            <li class="gnb-list">
+                                <a href="#">만화</a>
+                            </li>
+                            <li class="gnb-list">
+                                <a href="#">웹소설</a>
+                            </li>
+                            <li class="gnb-list">
+                                <a href="#"><b>도서</b></a>
+                            </li>
+                            <li class="gnb-list blank-link">
+                                <a href="#" target="_blank">
+                                    <span>셀렉트</span>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.508 4.561a.942.942 0 00-.943.943v7.36c0 .522.422.944.943.944h7.36a.942.942 0 00.943-.943v-1.457a.6.6 0 111.2 0v1.457c0 1.184-.959 2.143-2.143 2.143h-7.36a2.142 2.142 0 01-2.143-2.143v-7.36c0-1.185.959-2.144 2.143-2.144h1.457a.6.6 0 010 1.2H5.508zm4.253-.6a.6.6 0 01.6-.6h4.05a.6.6 0 01.6.6v4.05a.6.6 0 11-1.2 0V5.415l-4.649 4.648a.6.6 0 01-.848-.848l4.654-4.654H10.36a.6.6 0 01-.6-.6z" fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__util">
+                        <a href="#" class="total__menu">
+                            <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-zt3wi2">
+                                <path d="M4.5 7h15M4.5 12h15M4.5 17h15" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <span>전체 카테고리</span>
+                        </a>
+                        <a href="#" class="recharge__cash">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="리디 캐시 더블 포인트 충전" class="fig-1a09izn">
+                                <circle cx="12" cy="12" r="10" fill="#FDC842"></circle>
+                                <path d="M11.807 15.338l2.36-3.887-.378 1.36v-.766l-1.982-3.207h1.937l1.189 2.198h.766l-1.068.653 1.532-2.851H18l-2.068 3.225v.766l-.387-1.356 2.437 3.865h-1.856L14.86 13.23h-.766l1.1-.63-1.627 2.738h-1.761zM6.095 15.338v-1.104l2.04-1.9c.319-.292.565-.53.739-.717.177-.19.299-.35.365-.482a.875.875 0 00.103-.4v-.019a.835.835 0 00-.103-.423.699.699 0 00-.302-.28 1.037 1.037 0 00-.468-.099c-.19 0-.356.04-.5.117a.864.864 0 00-.334.325.893.893 0 00-.121.468v.036L6 10.856v-.027c0-.433.105-.811.315-1.135a2.13 2.13 0 01.888-.757c.381-.183.824-.275 1.329-.275.483 0 .905.081 1.265.243.364.16.646.383.847.672a1.7 1.7 0 01.307 1.008v.023c0 .243-.051.485-.154.725-.102.24-.27.497-.504.77-.234.27-.551.579-.95.924l-1.505 1.32.455-.712v.712l-.455-.298h3.198v1.289H6.095z" fill="#fff"></path>
+                            </svg>
+                            <span>캐시충전</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- // end header navi -->
+            </div>
+        </div>
+    </header>
+    <!-- // end header -->
+
+    <!-- start common layout -->
+    <div class="layout">
+        <!-- start main banner -->
+        <div id="slider">
+            <div class="main__banner-wrap">
+                <div class="main__banner-inner">
+
+                </div>
+            </div>
+        </div>
+        <!-- // end main banner -->
+    </div>
+    <!-- // end common layout -->
+
+    <!-- start footer -->
+    <footer id="footer">
+        <div class="footer-wrap">
+            <div class="footer-inner">
+                <div class="footer-top">
+                    <div class="footer__list-wrap">
+                        <div class="footer__list">
+                            <a href="#" class="icon-type">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-1v994a0">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.07A7.953 7.953 0 004.25 8.25h-.85A2.75 2.75 0 00.648 11v2a2.75 2.75 0 002.75 2.75h1.4a.75.75 0 00.75-.75v-.574a.76.76 0 00.002-.06V10.02a6.45 6.45 0 0112.9 0v4.943a4.909 4.909 0 01-3.829 4.788 2.25 2.25 0 10-.012 1.53 6.411 6.411 0 005.293-5.531h.699a2.75 2.75 0 002.75-2.75v-2a2.75 2.75 0 00-2.75-2.75h-.849a7.953 7.953 0 00-7.752-6.18zM11.25 11a.75.75 0 00-1.5 0v.8a.75.75 0 001.5 0V11zm2.25-.75a.75.75 0 01.75.75v.8a.75.75 0 01-1.5 0V11a.75.75 0 01.75-.75zM11.75 20.5a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.398 9.75c-.69 0-1.25.56-1.25 1.25v2c0 .69.56 1.25 1.25 1.25h.65v-4.5h-.65zM21.852 11c0-.69-.56-1.25-1.25-1.25h-.65v4.5h.65c.69 0 1.25-.56 1.25-1.25v-2z" fill="currentColor"></path>
+                                </svg>
+                                <span>고객센터</span>
+                            </a>
+                            <a href="#" class="icon-type">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-1v994a0">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.75 4.61a1.75 1.75 0 00-2.526-1.568L7.734 6.75H5A1.75 1.75 0 003.25 8.5v7c0 .966.784 1.75 1.75 1.75h2.734l7.49 3.707a1.75 1.75 0 002.526-1.568V4.611zm-1.86-.223a.25.25 0 01.36.224v14.778a.25.25 0 01-.36.224l-7.648-3.785-.157-.078H5a.25.25 0 01-.25-.25v-7A.25.25 0 015 8.25h3.085l.157-.078 7.647-3.785zm5.46 5.914a.75.75 0 00-1.5 0v3.4a.75.75 0 001.5 0v-3.4z" fill="currentColor"></path>
+                                </svg>
+                                <span>공지사항</span>
+                            </a>
+                        </div>
+                        <!-- // end footer__list -->
+                        <div class="footer__list">
+                            <p class="title">서비스</p>
+                            <a href="#">제휴카드</a>
+                            <a href="#">뷰어 다운로드</a>
+                            <a href="#">CP사이트</a>
+                            <a href="#">리디바탕</a>
+                        </div>
+                        <!-- // end footer__list -->
+                        <div class="footer__list">
+                            <p class="title">기타 문의</p>
+                            <a href="#">콘텐츠 제공 문의</a>
+                            <a href="#">사업 제휴 문의</a>
+                        </div>
+                        <!-- // end footer__list -->
+                        <div class="footer__list">
+                            <p class="title">회사</p>
+                            <a href="#">회사 소개</a>
+                            <a href="#">
+                                <span>인재채용</span>
+                                <svg width="1em" height="1em" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="NEW" class="fig-18yedlc">
+                                    <circle cx="7" cy="7" r="7" fill="currentColor"></circle>
+                                    <path d="M9.18 9.798h-.992L5.932 6.302v3.496H4.82V4.102h.992L8.068 7.59V4.102H9.18v5.696z" fill="#fff"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- // end footer__list -->
+                    </div>
+                    <!-- // end footer__list-wrap -->
+                    <div class="sns__util">
+                        <a href="#facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.61 13.253l.31-2.33H12.97V9.41c0-.64.282-1.264 1.15-1.264H15v-1.98A8.796 8.796 0 0013.439 6c-1.605 0-2.646 1.123-2.646 3.144v1.78H9v2.329h1.793V18.9c.723.133 1.46.133 2.183 0v-5.647h1.634z" fill="currentColor"></path>
+                            </svg>
+                            <span class="blind">리디북스 페이스북 바로가기</span>
+                        </a>
+                        <a href="#instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.687 6.3H9.314A3.013 3.013 0 006.3 9.313v5.373A3.013 3.013 0 009.314 17.7h5.373a3.013 3.013 0 003.013-3.012V9.313A3.012 3.012 0 0014.687 6.3zm0-1.3H9.314A4.314 4.314 0 005 9.313v5.373A4.313 4.313 0 009.314 19h5.373A4.312 4.312 0 0019 14.688V9.313A4.31 4.31 0 0014.687 5zm1.871 3.28a.937.937 0 11-1.874-.002.937.937 0 011.874.001zM14.2 12a2.2 2.2 0 11-4.4 0 2.2 2.2 0 014.4 0zm1.3 0a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z" fill="currentColor"></path>
+                            </svg>
+                            <span class="blind">리디북스 인스타그램 바로가기</span>
+                        </a>
+                        <a href="#twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.776 5.5l4.83 6.43-4.856 5.237h1.092l4.254-4.583 3.433 4.583h3.721l-5.101-6.796L17.674 5.5h-1.092l-3.923 4.217L9.497 5.5h-3.72zm1.607.802h1.713l7.547 10.063H14.93L7.383 6.302z" fill="#787878"></path>
+                            </svg>
+                            <span class="blind">리디북스 X 바로가기</span>
+                        </a>
+                        <a href="#youtube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.521 16.57A1 1 0 019 15.717V8.283a1 1 0 011.521-.853l6.083 3.717a1 1 0 010 1.706L10.52 16.57z" fill="currentColor"></path>
+                            </svg>
+                            <span class="blind">리디북스 유튜브 바로가기</span>
+                        </a>
+                        <a href="#tiktok">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.371 5h2.411s1.113 2.656 3.718 2.911l-.46 2.35s-1.838-.052-3.268-1.533v5.822s0 1.226-.664 2.247c0 0-1.073 1.941-3.473 2.145 0 0-1.736.205-3.268-.919 0 0-1.635-1.021-1.839-3.268 0 0-.357-2.094 1.481-3.83 0 0 1.226-1.43 3.984-1.226v2.4h-.767s-1.532-.102-2.144 1.43c0 0-.562 1.48.663 2.502 0 0 .92.817 2.146.409 0 0 1.174-.307 1.43-1.634 0 0 .05-.154.05-.766V5z" fill="#787878"></path>
+                            </svg>
+                            <span class="blind">리디북스 틱톡 바로가기</span>
+                        </a>
+                    </div>
+                    <!-- // end sns__util -->
+                </div>
+                <!-- // end footer-top -->
+                <div class="copyright-wrap">
+                    <a href="javascript:void(0);" title="리디(주) 사업자 정보 열기">
+                        <span>리디(주) 사업자 정보</span>
+                        <svg width="1em" height="1em" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-4dsd3s">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.53375 0.920861C2.33849 1.11612 2.33849 1.43271 2.53375 1.62797L5.4052 4.49941L2.53375 7.37086C2.33849 7.56612 2.33849 7.88271 2.53375 8.07797C2.72901 8.27323 3.0456 8.27323 3.24086 8.07797L6.46586 4.85297C6.55963 4.7592 6.6123 4.63202 6.6123 4.49941C6.6123 4.36681 6.55963 4.23963 6.46586 4.14586L3.24086 0.920861C3.0456 0.725599 2.72901 0.725599 2.53375 0.920861Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                    <dl class="company-content">
+                        <div>
+                            <dt>대표자</dt>
+                            <dd>배기식</dd>
+                        </div>
+                        <div>
+                            <dt>사업자 등록번호</dt>
+                            <dd>120-87-27435</dd>
+                        </div>
+                        <div>
+                            <dt>통신판매업 신고번호</dt>
+                            <dd>제 2009-서울강남 35-02139호</dd>
+                        </div>
+                        <div>
+                            <dt>이메일</dt>
+                            <dd>help@ridi.com</dd>
+                        </div>
+                        <div>
+                            <dt>대표전화</dt>
+                            <dd>1644-0331</dd>
+                        </div>
+                        <div>
+                            <dt>주소</dt>
+                            <dd>서울시 강남구 역삼동 702-28 어반벤처빌딩 4, 10, 11층(테헤란로 325)</dd>
+                        </div>
+                    </dl>
+                    <div class="company-content">
+                        <a href="#">이용약관</a>
+                        <a href="#" style="font-weight: 700;">개인정보 처리방침</a>
+                        <a href="#">청소년보호정책</a>
+                        <a href="#">사업자정보확인</a>
+                    </div>
+                    <div class="copyright"><b>©</b>RIDI Corp.</div>
+                </div>
+                <!-- // end copyright-wrap -->
+            </div>
+            <!-- // end footer-inner -->
+        </div>
+        <!-- // end footer-wrap -->
+    </footer>
+    <!-- // end footer -->
+</body>
+</html>
