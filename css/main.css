@@ -1,2 +1,32 @@
 @charset "utf-8";
 
+/* quick menu */
+.quick__menu-wrap {max-width: 1170px; margin: 30px auto 0; padding: 0 30px;}
+.quick__menu-list {display: flex; align-items: center; justify-content: center; gap: 20px;}
+.quick__menu-list .quick__menu {}
+.quick__menu-list .quick__menu a {display: inline-block;}
+.quick__menu-list .quick__menu img {width: 70px; height: 70px;}
+.quick__menu-list .quick__menu .text {display: block; margin: 8px 0 0; font-weight: 500; font-size: 13px; line-height: 16px; color: #141414; text-align: center;}
+
+/* common */
+.main-title {overflow: hidden; padding: 6px 0 16px; font-weight: 700; font-size: 22px; line-height: 26px; color: #141414; letter-spacing: -0.01em; white-space: nowrap; text-overflow: ellipsis;}
+
+/* best lanking */
+.lanking-wrap {max-width: 1170px; margin: 40px auto 30px; padding: 0 30px; box-sizing: border-box;}
+.lanking__slide-wrap {overflow: hidden;}
+/* .lanking__slide-inner {display: flex; flex-wrap: wrap; align-items: center; gap: 6px 26px;} */
+.lanking__slide {display: flex; align-items: center; /*width: calc( (100% - 52px) / 3 );*/}
+.lanking__slide .img-wrap {position: relative; overflow: hidden; min-width: 80px; aspect-ratio: 11 / 16; background: #ddd; border-radius: 4px;}
+.lanking__slide .img-wrap svg {position: absolute; top: 4px; right: 4px; width: 20px; height: 20px; z-index: 1;}
+.lanking__slide .text-area {}
+.lanking__slide .lank {display: flex; align-items: center; justify-content: center; width: 80px; font-weight: 500; font-size: 18px; line-height: 21px; color: #141414;}
+.lanking__slide .text-wrap {}
+.lanking__slide .text-wrap .title {display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; overflow-wrap: break-word; white-space: normal; max-height: calc(19px); font-weight: 500; font-size: 16px; color: #141414; line-height: 19px; word-break: break-all;}
+.lanking__slide .text-wrap .writer {display: flex; align-items: center; margin: 6px 0 0;}
+.lanking__slide .text-wrap .writer span:first-child {display: -webkit-inline-box; max-width: 66%; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; white-space: normal;}
+.lanking__slide .text-wrap .writer span {font-size: 14px; color: #787878; line-height: 17px;}
+.lanking__slide .text-wrap .writer span:not(:first-child):before {content: '·'; margin: 0 5px;}
+.lanking__slide .text-wrap .star-wrap {display: flex; align-items: center; margin: 7px 0 0;}
+.lanking__slide .text-wrap .star-wrap svg {margin: 0 2px 0 0; font-size: 11px; line-height: 13px; color: #dc3232;}
+.lanking__slide .text-wrap .star-wrap span.star {font-size: 13px; color: #dc3232;}
+.lanking__slide .text-wrap .star-wrap span:not(.star) {font-size: 12px; color: #787878;}

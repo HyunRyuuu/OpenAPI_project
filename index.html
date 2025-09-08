@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>도서 전자책 - 리디</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
 </head>
@@ -20,12 +22,14 @@
             <div class="header-inner">
                 <!-- start header top -->
                 <div class="header-top">
-                    <a href="#logo" class="logo">
-                        <svg viewBox="0 0 66 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-1so0vu4">
-                            <path d="M20.29 8.281v.063c0 3.306-1.612 5.8-4.546 7.08l5.608 8.155h-6.8l-4.778-7.098H5.787v7.103H0V.52h11.444c5.457 0 8.845 2.974 8.845 7.76zm-9.167 3.454c2.076 0 3.317-1.45 3.317-3.138v-.062c0-2.258-1.853-3.17-3.411-3.17H5.787v6.37h5.336zM24.37.52h5.786v23.063h-5.786V.52zm20.668 0H34.39v23.063h10.65c7.117 0 10.73-4.85 10.73-11.53v-.061C55.77 5.343 52.156.52 45.04.52zm4.724 11.592c0 3.697-1.63 6.448-5.384 6.448h-4.202V5.54h4.202c3.755 0 5.385 2.774 5.385 6.511v.063zM58.94.52h5.786v23.063H58.94V.52z" fill="#1E9EFF"></path>
-                        </svg>
-                        <span class="blind">리디북스 로고</span>
-                    </a>
+                    <h1>
+                        <a href="#logo" class="logo">
+                            <svg viewBox="0 0 66 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-1so0vu4">
+                                <path d="M20.29 8.281v.063c0 3.306-1.612 5.8-4.546 7.08l5.608 8.155h-6.8l-4.778-7.098H5.787v7.103H0V.52h11.444c5.457 0 8.845 2.974 8.845 7.76zm-9.167 3.454c2.076 0 3.317-1.45 3.317-3.138v-.062c0-2.258-1.853-3.17-3.411-3.17H5.787v6.37h5.336zM24.37.52h5.786v23.063h-5.786V.52zm20.668 0H34.39v23.063h10.65c7.117 0 10.73-4.85 10.73-11.53v-.061C55.77 5.343 52.156.52 45.04.52zm4.724 11.592c0 3.697-1.63 6.448-5.384 6.448h-4.202V5.54h4.202c3.755 0 5.385 2.774 5.385 6.511v.063zM58.94.52h5.786v23.063H58.94V.52z" fill="#1E9EFF"></path>
+                            </svg>
+                            <span class="blind">리디북스 로고</span>
+                        </a>
+                    </h1>
                     <div class="header__util">
                         <div class="search-area">
                             <div class="search__box-wrap">
@@ -142,6 +146,540 @@
             </div>
         </div>
         <!-- // end main banner -->
+
+        <!-- start quick menu -->
+        <div class="quick__menu-wrap">
+            <ul class="quick__menu-list">
+                <li class="quick__menu">
+                    <a href="#">
+                        <img src="/image/main/icon_link_new.png" alt="신작">
+                        <span class="text">신작</span>
+                    </a>
+                </li>
+                <li class="quick__menu">
+                    <a href="#">
+                        <img src="/image/main/icon_link_event.png" alt="이벤트">
+                        <span class="text">이벤트</span>
+                    </a>
+                </li>
+                <li class="quick__menu">
+                    <a href="#">
+                        <img src="/image/main/icon_link_ridionly.png" alt="리디온리">
+                        <span class="text">리디온리</span>
+                    </a>
+                </li>
+                <li class="quick__menu">
+                    <a href="#">
+                        <img src="/image/main/icon_link_ridamu.png" alt="리다무">
+                        <span class="text">리다무</span>
+                    </a>
+                </li>
+                <li class="quick__menu">
+                    <a href="#">
+                        <img src="/image/main/icon_link_100.png" alt="All100(원)">
+                        <span class="text">All100</span>
+                    </a>
+                </li>
+                <li class="quick__menu">
+                    <a href="#">
+                        <img src="/image/main/icon_link_month_new.png" alt="이달의 신작">
+                        <span class="text">이달의 신작</span>
+                    </a>
+                </li>
+                <li class="quick__menu">
+                    <a href="#">
+                        <img src="/image/main/icon_link_short.png" alt="단편작">
+                        <span class="text">단편작</span>
+                    </a>
+                </li>
+                <li class="quick__menu">
+                    <a href="#">
+                        <img src="/image/main/icon_link_19.png" alt="19+">
+                        <span class="text">19+</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- // end quick menu -->
+
+        <!-- start best lanking - 웹툰 실시간 랭킹 -->
+        <div class="lanking-wrap">
+            <h3 class="main-title">웹툰 실시간 랭킹</h3>
+            <div class="swiper lanking__slide-wrap">
+                <div class="swiper-wrapper lanking__slide-inner">
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <i>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="19세 미만 구독불가" class="fig-1x24mw5"><circle cx="12" cy="12" r="12" fill="#fff"></circle><path opacity="0.8" d="M.5 12a11.5 11.5 0 1023 0 11.5 11.5 0 10-23 0" stroke="#DC3232"></path><g clip-path="url(#BadgeAdult_svg__clip0_7220_94960)"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.567 10.677c0-1.547 1.19-2.677 2.86-2.677C16.07 8 17.5 9.156 17.5 11.902v.01C17.5 14.48 16.331 16 14.395 16c-1.414 0-2.47-.829-2.716-1.996l-.011-.058h1.355l.016.053c.203.533.678.882 1.356.882 1.222 0 1.739-1.183 1.798-2.64l.002-.088.003-.087h-.107c-.282.602-.955 1.135-2.011 1.135-1.478 0-2.513-1.066-2.513-2.513v-.01zm1.344-.037c0 .882.635 1.516 1.51 1.516.87 0 1.537-.623 1.537-1.484v-.01c0-.872-.667-1.553-1.52-1.553-.85 0-1.527.67-1.527 1.52v.011zm-3.028 5.17H8.506V9.531h-.09L6.5 10.873V9.589L8.512 8.19h1.37v7.62z" fill="#000"></path></g><defs><clipPath id="BadgeAdult_svg__clip0_7220_94960"><path fill="#fff" transform="translate(6 8)" d="M0 0h12v8H0z"></path></clipPath></defs></svg>
+                                </i>
+                            </a>
+                        </div>
+                        <div class="lank">1</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">음란한 딸기우유</p>
+                                <p class="writer">
+                                    <span>연못 외 2명</span>
+                                    <span>7화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.9</span>
+                                    &nbsp;
+                                    <span>(3,759)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <!-- 이미지 -->
+                            </a>
+                        </div>
+                        <div class="lank">2</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">이세계 착각 헌터</p>
+                                <p class="writer">
+                                    <span>ab Entertainment 외 2명</span>
+                                    <span>4화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.9</span>
+                                    &nbsp;
+                                    <span>(3,759)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <i>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="19세 미만 구독불가" class="fig-1x24mw5"><circle cx="12" cy="12" r="12" fill="#fff"></circle><path opacity="0.8" d="M.5 12a11.5 11.5 0 1023 0 11.5 11.5 0 10-23 0" stroke="#DC3232"></path><g clip-path="url(#BadgeAdult_svg__clip0_7220_94960)"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.567 10.677c0-1.547 1.19-2.677 2.86-2.677C16.07 8 17.5 9.156 17.5 11.902v.01C17.5 14.48 16.331 16 14.395 16c-1.414 0-2.47-.829-2.716-1.996l-.011-.058h1.355l.016.053c.203.533.678.882 1.356.882 1.222 0 1.739-1.183 1.798-2.64l.002-.088.003-.087h-.107c-.282.602-.955 1.135-2.011 1.135-1.478 0-2.513-1.066-2.513-2.513v-.01zm1.344-.037c0 .882.635 1.516 1.51 1.516.87 0 1.537-.623 1.537-1.484v-.01c0-.872-.667-1.553-1.52-1.553-.85 0-1.527.67-1.527 1.52v.011zm-3.028 5.17H8.506V9.531h-.09L6.5 10.873V9.589L8.512 8.19h1.37v7.62z" fill="#000"></path></g><defs><clipPath id="BadgeAdult_svg__clip0_7220_94960"><path fill="#fff" transform="translate(6 8)" d="M0 0h12v8H0z"></path></clipPath></defs></svg>
+                                </i>
+                            </a>
+                        </div>
+                        <div class="lank">3</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">엘프의 짝짓기</p>
+                                <p class="writer">
+                                    <span>포푸리</span>
+                                    <span>5화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.9</span>
+                                    &nbsp;
+                                    <span>(4,882)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <i>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="19세 미만 구독불가" class="fig-1x24mw5"><circle cx="12" cy="12" r="12" fill="#fff"></circle><path opacity="0.8" d="M.5 12a11.5 11.5 0 1023 0 11.5 11.5 0 10-23 0" stroke="#DC3232"></path><g clip-path="url(#BadgeAdult_svg__clip0_7220_94960)"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.567 10.677c0-1.547 1.19-2.677 2.86-2.677C16.07 8 17.5 9.156 17.5 11.902v.01C17.5 14.48 16.331 16 14.395 16c-1.414 0-2.47-.829-2.716-1.996l-.011-.058h1.355l.016.053c.203.533.678.882 1.356.882 1.222 0 1.739-1.183 1.798-2.64l.002-.088.003-.087h-.107c-.282.602-.955 1.135-2.011 1.135-1.478 0-2.513-1.066-2.513-2.513v-.01zm1.344-.037c0 .882.635 1.516 1.51 1.516.87 0 1.537-.623 1.537-1.484v-.01c0-.872-.667-1.553-1.52-1.553-.85 0-1.527.67-1.527 1.52v.011zm-3.028 5.17H8.506V9.531h-.09L6.5 10.873V9.589L8.512 8.19h1.37v7.62z" fill="#000"></path></g><defs><clipPath id="BadgeAdult_svg__clip0_7220_94960"><path fill="#fff" transform="translate(6 8)" d="M0 0h12v8H0z"></path></clipPath></defs></svg>
+                                </i>
+                            </a>
+                        </div>
+                        <div class="lank">4</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">에프 마이 엑스 [완전판]</p>
+                                <p class="writer">
+                                    <span>tickle 외 2명</span>
+                                    <span>3화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.9</span>
+                                    &nbsp;
+                                    <span>(3,926)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <i>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="19세 미만 구독불가" class="fig-1x24mw5"><circle cx="12" cy="12" r="12" fill="#fff"></circle><path opacity="0.8" d="M.5 12a11.5 11.5 0 1023 0 11.5 11.5 0 10-23 0" stroke="#DC3232"></path><g clip-path="url(#BadgeAdult_svg__clip0_7220_94960)"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.567 10.677c0-1.547 1.19-2.677 2.86-2.677C16.07 8 17.5 9.156 17.5 11.902v.01C17.5 14.48 16.331 16 14.395 16c-1.414 0-2.47-.829-2.716-1.996l-.011-.058h1.355l.016.053c.203.533.678.882 1.356.882 1.222 0 1.739-1.183 1.798-2.64l.002-.088.003-.087h-.107c-.282.602-.955 1.135-2.011 1.135-1.478 0-2.513-1.066-2.513-2.513v-.01zm1.344-.037c0 .882.635 1.516 1.51 1.516.87 0 1.537-.623 1.537-1.484v-.01c0-.872-.667-1.553-1.52-1.553-.85 0-1.527.67-1.527 1.52v.011zm-3.028 5.17H8.506V9.531h-.09L6.5 10.873V9.589L8.512 8.19h1.37v7.62z" fill="#000"></path></g><defs><clipPath id="BadgeAdult_svg__clip0_7220_94960"><path fill="#fff" transform="translate(6 8)" d="M0 0h12v8H0z"></path></clipPath></defs></svg>
+                                </i>
+                            </a>
+                        </div>
+                        <div class="lank">5</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">내게 빌어봐(완전판)</p>
+                                <p class="writer">
+                                    <span>이서 외 3명</span>
+                                    <span>3화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.9</span>
+                                    &nbsp;
+                                    <span>(6,753)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <i>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="19세 미만 구독불가" class="fig-1x24mw5"><circle cx="12" cy="12" r="12" fill="#fff"></circle><path opacity="0.8" d="M.5 12a11.5 11.5 0 1023 0 11.5 11.5 0 10-23 0" stroke="#DC3232"></path><g clip-path="url(#BadgeAdult_svg__clip0_7220_94960)"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.567 10.677c0-1.547 1.19-2.677 2.86-2.677C16.07 8 17.5 9.156 17.5 11.902v.01C17.5 14.48 16.331 16 14.395 16c-1.414 0-2.47-.829-2.716-1.996l-.011-.058h1.355l.016.053c.203.533.678.882 1.356.882 1.222 0 1.739-1.183 1.798-2.64l.002-.088.003-.087h-.107c-.282.602-.955 1.135-2.011 1.135-1.478 0-2.513-1.066-2.513-2.513v-.01zm1.344-.037c0 .882.635 1.516 1.51 1.516.87 0 1.537-.623 1.537-1.484v-.01c0-.872-.667-1.553-1.52-1.553-.85 0-1.527.67-1.527 1.52v.011zm-3.028 5.17H8.506V9.531h-.09L6.5 10.873V9.589L8.512 8.19h1.37v7.62z" fill="#000"></path></g><defs><clipPath id="BadgeAdult_svg__clip0_7220_94960"><path fill="#fff" transform="translate(6 8)" d="M0 0h12v8H0z"></path></clipPath></defs></svg>
+                                </i>
+                            </a>
+                        </div>
+                        <div class="lank">6</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">폐하의 밤 [완전판]</p>
+                                <p class="writer">
+                                    <span>핫퍼지코믹스 외 1명</span>
+                                    <span>3화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.9</span>
+                                    &nbsp;
+                                    <span>(3,178)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <!-- img -->
+                            </a>
+                        </div>
+                        <div class="lank">7</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">상수리나무 아래</p>
+                                <p class="writer">
+                                    <span>P 외 3명</span>
+                                    <span>4화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.9</span>
+                                    &nbsp;
+                                    <span>(49,651)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <!-- img -->
+                            </a>
+                        </div>
+                        <div class="lank">8</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">상류 사회</p>
+                                <p class="writer">
+                                    <span>스르륵코믹스 외 1명</span>
+                                    <span>3화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.9</span>
+                                    &nbsp;
+                                    <span>(3,706)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <!-- img -->
+                            </a>
+                        </div>
+                        <div class="lank">9</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">코즈믹 호러는 어떠세요?</p>
+                                <p class="writer">
+                                    <span>길목 외 2명</span>
+                                    <span>3화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.9</span>
+                                    &nbsp;
+                                    <span>(3,398)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 1 page -->
+                     
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <i>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="19세 미만 구독불가" class="fig-1x24mw5"><circle cx="12" cy="12" r="12" fill="#fff"></circle><path opacity="0.8" d="M.5 12a11.5 11.5 0 1023 0 11.5 11.5 0 10-23 0" stroke="#DC3232"></path><g clip-path="url(#BadgeAdult_svg__clip0_7220_94960)"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.567 10.677c0-1.547 1.19-2.677 2.86-2.677C16.07 8 17.5 9.156 17.5 11.902v.01C17.5 14.48 16.331 16 14.395 16c-1.414 0-2.47-.829-2.716-1.996l-.011-.058h1.355l.016.053c.203.533.678.882 1.356.882 1.222 0 1.739-1.183 1.798-2.64l.002-.088.003-.087h-.107c-.282.602-.955 1.135-2.011 1.135-1.478 0-2.513-1.066-2.513-2.513v-.01zm1.344-.037c0 .882.635 1.516 1.51 1.516.87 0 1.537-.623 1.537-1.484v-.01c0-.872-.667-1.553-1.52-1.553-.85 0-1.527.67-1.527 1.52v.011zm-3.028 5.17H8.506V9.531h-.09L6.5 10.873V9.589L8.512 8.19h1.37v7.62z" fill="#000"></path></g><defs><clipPath id="BadgeAdult_svg__clip0_7220_94960"><path fill="#fff" transform="translate(6 8)" d="M0 0h12v8H0z"></path></clipPath></defs></svg>
+                                </i>
+                            </a>
+                        </div>
+                        <div class="lank">10</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">약탈혼 (완전판)</p>
+                                <p class="writer">
+                                    <span>헤라 외 2명</span>
+                                    <span>3화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.8</span>
+                                    &nbsp;
+                                    <span>(8,960)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <i>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="19세 미만 구독불가" class="fig-1x24mw5"><circle cx="12" cy="12" r="12" fill="#fff"></circle><path opacity="0.8" d="M.5 12a11.5 11.5 0 1023 0 11.5 11.5 0 10-23 0" stroke="#DC3232"></path><g clip-path="url(#BadgeAdult_svg__clip0_7220_94960)"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.567 10.677c0-1.547 1.19-2.677 2.86-2.677C16.07 8 17.5 9.156 17.5 11.902v.01C17.5 14.48 16.331 16 14.395 16c-1.414 0-2.47-.829-2.716-1.996l-.011-.058h1.355l.016.053c.203.533.678.882 1.356.882 1.222 0 1.739-1.183 1.798-2.64l.002-.088.003-.087h-.107c-.282.602-.955 1.135-2.011 1.135-1.478 0-2.513-1.066-2.513-2.513v-.01zm1.344-.037c0 .882.635 1.516 1.51 1.516.87 0 1.537-.623 1.537-1.484v-.01c0-.872-.667-1.553-1.52-1.553-.85 0-1.527.67-1.527 1.52v.011zm-3.028 5.17H8.506V9.531h-.09L6.5 10.873V9.589L8.512 8.19h1.37v7.62z" fill="#000"></path></g><defs><clipPath id="BadgeAdult_svg__clip0_7220_94960"><path fill="#fff" transform="translate(6 8)" d="M0 0h12v8H0z"></path></clipPath></defs></svg>
+                                </i>
+                            </a>
+                        </div>
+                        <div class="lank">11</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">쓰레기의 사정 [완전판]</p>
+                                <p class="writer">
+                                    <span>명 외 2명</span>
+                                    <span>3화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.9</span>
+                                    &nbsp;
+                                    <span>(5,864)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <i>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="19세 미만 구독불가" class="fig-1x24mw5"><circle cx="12" cy="12" r="12" fill="#fff"></circle><path opacity="0.8" d="M.5 12a11.5 11.5 0 1023 0 11.5 11.5 0 10-23 0" stroke="#DC3232"></path><g clip-path="url(#BadgeAdult_svg__clip0_7220_94960)"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.567 10.677c0-1.547 1.19-2.677 2.86-2.677C16.07 8 17.5 9.156 17.5 11.902v.01C17.5 14.48 16.331 16 14.395 16c-1.414 0-2.47-.829-2.716-1.996l-.011-.058h1.355l.016.053c.203.533.678.882 1.356.882 1.222 0 1.739-1.183 1.798-2.64l.002-.088.003-.087h-.107c-.282.602-.955 1.135-2.011 1.135-1.478 0-2.513-1.066-2.513-2.513v-.01zm1.344-.037c0 .882.635 1.516 1.51 1.516.87 0 1.537-.623 1.537-1.484v-.01c0-.872-.667-1.553-1.52-1.553-.85 0-1.527.67-1.527 1.52v.011zm-3.028 5.17H8.506V9.531h-.09L6.5 10.873V9.589L8.512 8.19h1.37v7.62z" fill="#000"></path></g><defs><clipPath id="BadgeAdult_svg__clip0_7220_94960"><path fill="#fff" transform="translate(6 8)" d="M0 0h12v8H0z"></path></clipPath></defs></svg>
+                                </i>
+                            </a>
+                        </div>
+                        <div class="lank">3</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">시절연애</p>
+                                <p class="writer">
+                                    <span>유하리 외 2명</span>
+                                    <span>2화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.9</span>
+                                    &nbsp;
+                                    <span>(2,116)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <i>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="19세 미만 구독불가" class="fig-1x24mw5"><circle cx="12" cy="12" r="12" fill="#fff"></circle><path opacity="0.8" d="M.5 12a11.5 11.5 0 1023 0 11.5 11.5 0 10-23 0" stroke="#DC3232"></path><g clip-path="url(#BadgeAdult_svg__clip0_7220_94960)"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.567 10.677c0-1.547 1.19-2.677 2.86-2.677C16.07 8 17.5 9.156 17.5 11.902v.01C17.5 14.48 16.331 16 14.395 16c-1.414 0-2.47-.829-2.716-1.996l-.011-.058h1.355l.016.053c.203.533.678.882 1.356.882 1.222 0 1.739-1.183 1.798-2.64l.002-.088.003-.087h-.107c-.282.602-.955 1.135-2.011 1.135-1.478 0-2.513-1.066-2.513-2.513v-.01zm1.344-.037c0 .882.635 1.516 1.51 1.516.87 0 1.537-.623 1.537-1.484v-.01c0-.872-.667-1.553-1.52-1.553-.85 0-1.527.67-1.527 1.52v.011zm-3.028 5.17H8.506V9.531h-.09L6.5 10.873V9.589L8.512 8.19h1.37v7.62z" fill="#000"></path></g><defs><clipPath id="BadgeAdult_svg__clip0_7220_94960"><path fill="#fff" transform="translate(6 8)" d="M0 0h12v8H0z"></path></clipPath></defs></svg>
+                                </i>
+                            </a>
+                        </div>
+                        <div class="lank">13</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">프리즌 러브</p>
+                                <p class="writer">
+                                    <span>함지 외 2명</span>
+                                    <span>3화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.8</span>
+                                    &nbsp;
+                                    <span>(3,240)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <i>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="19세 미만 구독불가" class="fig-1x24mw5"><circle cx="12" cy="12" r="12" fill="#fff"></circle><path opacity="0.8" d="M.5 12a11.5 11.5 0 1023 0 11.5 11.5 0 10-23 0" stroke="#DC3232"></path><g clip-path="url(#BadgeAdult_svg__clip0_7220_94960)"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.567 10.677c0-1.547 1.19-2.677 2.86-2.677C16.07 8 17.5 9.156 17.5 11.902v.01C17.5 14.48 16.331 16 14.395 16c-1.414 0-2.47-.829-2.716-1.996l-.011-.058h1.355l.016.053c.203.533.678.882 1.356.882 1.222 0 1.739-1.183 1.798-2.64l.002-.088.003-.087h-.107c-.282.602-.955 1.135-2.011 1.135-1.478 0-2.513-1.066-2.513-2.513v-.01zm1.344-.037c0 .882.635 1.516 1.51 1.516.87 0 1.537-.623 1.537-1.484v-.01c0-.872-.667-1.553-1.52-1.553-.85 0-1.527.67-1.527 1.52v.011zm-3.028 5.17H8.506V9.531h-.09L6.5 10.873V9.589L8.512 8.19h1.37v7.62z" fill="#000"></path></g><defs><clipPath id="BadgeAdult_svg__clip0_7220_94960"><path fill="#fff" transform="translate(6 8)" d="M0 0h12v8H0z"></path></clipPath></defs></svg>
+                                </i>
+                            </a>
+                        </div>
+                        <div class="lank">14</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">폭야(暴夜) [완전판]</p>
+                                <p class="writer">
+                                    <span>핫퍼지코믹스 외 1명</span>
+                                    <span>3화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.8</span>
+                                    &nbsp;
+                                    <span>(3,398)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <i>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="19세 미만 구독불가" class="fig-1x24mw5"><circle cx="12" cy="12" r="12" fill="#fff"></circle><path opacity="0.8" d="M.5 12a11.5 11.5 0 1023 0 11.5 11.5 0 10-23 0" stroke="#DC3232"></path><g clip-path="url(#BadgeAdult_svg__clip0_7220_94960)"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.567 10.677c0-1.547 1.19-2.677 2.86-2.677C16.07 8 17.5 9.156 17.5 11.902v.01C17.5 14.48 16.331 16 14.395 16c-1.414 0-2.47-.829-2.716-1.996l-.011-.058h1.355l.016.053c.203.533.678.882 1.356.882 1.222 0 1.739-1.183 1.798-2.64l.002-.088.003-.087h-.107c-.282.602-.955 1.135-2.011 1.135-1.478 0-2.513-1.066-2.513-2.513v-.01zm1.344-.037c0 .882.635 1.516 1.51 1.516.87 0 1.537-.623 1.537-1.484v-.01c0-.872-.667-1.553-1.52-1.553-.85 0-1.527.67-1.527 1.52v.011zm-3.028 5.17H8.506V9.531h-.09L6.5 10.873V9.589L8.512 8.19h1.37v7.62z" fill="#000"></path></g><defs><clipPath id="BadgeAdult_svg__clip0_7220_94960"><path fill="#fff" transform="translate(6 8)" d="M0 0h12v8H0z"></path></clipPath></defs></svg>
+                                </i>
+                            </a>
+                        </div>
+                        <div class="lank">15</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">코즈믹 호러는 어떠세요?</p>
+                                <p class="writer">
+                                    <span>길목 외 2명</span>
+                                    <span>3화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.9</span>
+                                    &nbsp;
+                                    <span>(3,398)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <i>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="19세 미만 구독불가" class="fig-1x24mw5"><circle cx="12" cy="12" r="12" fill="#fff"></circle><path opacity="0.8" d="M.5 12a11.5 11.5 0 1023 0 11.5 11.5 0 10-23 0" stroke="#DC3232"></path><g clip-path="url(#BadgeAdult_svg__clip0_7220_94960)"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.567 10.677c0-1.547 1.19-2.677 2.86-2.677C16.07 8 17.5 9.156 17.5 11.902v.01C17.5 14.48 16.331 16 14.395 16c-1.414 0-2.47-.829-2.716-1.996l-.011-.058h1.355l.016.053c.203.533.678.882 1.356.882 1.222 0 1.739-1.183 1.798-2.64l.002-.088.003-.087h-.107c-.282.602-.955 1.135-2.011 1.135-1.478 0-2.513-1.066-2.513-2.513v-.01zm1.344-.037c0 .882.635 1.516 1.51 1.516.87 0 1.537-.623 1.537-1.484v-.01c0-.872-.667-1.553-1.52-1.553-.85 0-1.527.67-1.527 1.52v.011zm-3.028 5.17H8.506V9.531h-.09L6.5 10.873V9.589L8.512 8.19h1.37v7.62z" fill="#000"></path></g><defs><clipPath id="BadgeAdult_svg__clip0_7220_94960"><path fill="#fff" transform="translate(6 8)" d="M0 0h12v8H0z"></path></clipPath></defs></svg>
+                                </i>
+                            </a>
+                        </div>
+                        <div class="lank">16</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">만져도 돼? [완전판]</p>
+                                <p class="writer">
+                                    <span>라에 외 2명</span>
+                                    <span>1화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.9</span>
+                                    &nbsp;
+                                    <span>(363)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <i>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="19세 미만 구독불가" class="fig-1x24mw5"><circle cx="12" cy="12" r="12" fill="#fff"></circle><path opacity="0.8" d="M.5 12a11.5 11.5 0 1023 0 11.5 11.5 0 10-23 0" stroke="#DC3232"></path><g clip-path="url(#BadgeAdult_svg__clip0_7220_94960)"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.567 10.677c0-1.547 1.19-2.677 2.86-2.677C16.07 8 17.5 9.156 17.5 11.902v.01C17.5 14.48 16.331 16 14.395 16c-1.414 0-2.47-.829-2.716-1.996l-.011-.058h1.355l.016.053c.203.533.678.882 1.356.882 1.222 0 1.739-1.183 1.798-2.64l.002-.088.003-.087h-.107c-.282.602-.955 1.135-2.011 1.135-1.478 0-2.513-1.066-2.513-2.513v-.01zm1.344-.037c0 .882.635 1.516 1.51 1.516.87 0 1.537-.623 1.537-1.484v-.01c0-.872-.667-1.553-1.52-1.553-.85 0-1.527.67-1.527 1.52v.011zm-3.028 5.17H8.506V9.531h-.09L6.5 10.873V9.589L8.512 8.19h1.37v7.62z" fill="#000"></path></g><defs><clipPath id="BadgeAdult_svg__clip0_7220_94960"><path fill="#fff" transform="translate(6 8)" d="M0 0h12v8H0z"></path></clipPath></defs></svg>
+                                </i>
+                            </a>
+                        </div>
+                        <div class="lank">17</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">늑대 신랑 [완전판]</p>
+                                <p class="writer">
+                                    <span>핫퍼지코믹스 외 1명</span>
+                                    <span>4화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.9</span>
+                                    &nbsp;
+                                    <span>(3,390)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- swiper-slide lanking__slide -->
+                    <div class="swiper-slide lanking__slide">
+                        <div class="img-wrap">
+                            <a href="#">
+                                <!-- img -->
+                            </a>
+                        </div>
+                        <div class="lank">18</div>
+                        <div class="text-wrap">
+                            <a href="#">
+                                <p class="title">절대역 [완전판]</p>
+                                <p class="writer">
+                                    <span>불가마 외 1명</span>
+                                    <span>1화 무료</span>
+                                </p>
+                                <p class="star-wrap">
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="구매자 평균 별점" class="fig-18nf1i8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0l1.812 3.303L11 4.025 8.446 6.759l.459 3.741L5.5 8.903 2.095 10.5l.459-3.74L0 4.002l3.688-.7L5.5 0z" fill="currentColor"></path></svg>
+                                    <span class="star">4.8</span>
+                                    &nbsp;
+                                    <span>(7,938)</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lanking__slide-prev">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg>
+                </div>
+                <div class="lanking__slide-next">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg>
+                </div>
+            </div>
+        </div>
+        <!-- // end best lanking - 웹툰 실시간 랭킹 -->
+        
+
     </div>
     <!-- // end common layout -->
 
