@@ -6,10 +6,10 @@ $(document).ready(function(){
 		slidesPerColumn: 3,
 		slidesPerGroup: 9,
 		spaceBetween: 26,
-        navigator: {
-            prevEl: '.lanking__slide-prev',
-            nextEl: '.lanking__slide-next'
-        },
+        navigation: {
+         nextEl: ".lanking__slide-next",
+         prevEl: ".lanking__slide-prev",
+	    },
         watchOverflow: true,
     });
 });
