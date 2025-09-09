@@ -39,9 +39,22 @@
 .lanking__slide .text-wrap .star-wrap span.star {font-size: 13px; color: #dc3232;}
 .lanking__slide .text-wrap .star-wrap span:not(.star) {font-size: 12px; color: #787878;}
 
-/* book__list-wrap */
-.book__list-wrap {}
-.book__slide .img-wrap {position: relative; overflow: hidden; min-width: 180px; aspect-ratio: 20 / 29; background: #ddd; border-radius: 4px;}
+/* book__slide-wrap */
+.book__list-wrap {position: relative; margin: 70px 0 0; padding: 0 30px;}
+.book__slide-wrap {overflow: hidden;}
+.book__slide .img-wrap {position: relative; overflow: hidden; aspect-ratio: 20 / 29; background: #ddd; border-radius: 4px;}
+.book__slide .img-wrap .ridi-only {display: flex; align-items: center; justify-content: center; position: absolute; top: 0; left: 0; width: 61px; height: 30px; border-radius: 4px 0; background: #000; ;}
+.book__slide .img-wrap .ridi-only svg {width: 49px; height: 16px;}
+.book__slide .img-wrap .adult {position: absolute; top: 6px; right: 6px; font-size: 24px;}
+.book__slide .img-wrap .bottom {display: flex; align-items: center; justify-content: center; position: absolute; bottom: 0; left: 0;}
+.book__slide .img-wrap .bottom div {display: flex; align-items: center; justify-content: center; width: 28px; height: 28px;}
+.book__slide .img-wrap .bottom div:first-child {border-radius: 0 0 0 4px;}
+.book__slide .img-wrap .bottom div:last-child {border-radius: 0 4px 0 0;}
+.book__slide .img-wrap .bottom div img {width: 100%; height: 100%;}
+.book__slide .img-wrap .bottom .update {background: #1ecdcd;}
+.book__slide .img-wrap .bottom .time {background: #1e9eff;}
+.book__slide .img-wrap .bottom .free {width: auto; background: #324155; color: #fff;}
+.book__slide .text-wrap {margin: 10px 0 0; padding: 10px 0 0;}
 .book__slide .text-wrap .title {display: inline-block; font-weight: 500; font-size: 16px; color: #141414; line-height: 19px; word-break: break-all;}
 .book__slide .text-wrap .writer {display: flex; align-items: center; margin: 6px 0 0;}
 .book__slide .text-wrap .writer a {display: inline-block; font-size: 14px; color: #787878; line-height: 17px;}
@@ -50,3 +63,6 @@
 .book__slide .text-wrap .star-wrap svg {margin: 0 2px 0 0; font-size: 11px; line-height: 13px; color: #dc3232;}
 .book__slide .text-wrap .star-wrap span.star {font-size: 13px; color: #dc3232;}
 .book__slide .text-wrap .star-wrap span:not(.star) {font-size: 12px; color: #787878;}
+
+.book__slide-wrap .slider-prev,
+.book__slide-wrap .slider-next {top: 160px;}
