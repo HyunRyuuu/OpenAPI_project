@@ -39,14 +39,14 @@ $(document).ready(function(){
     main_banner.on('slideChangeTransitionStart', mainSlideChangeStart);
 
     // 웹툰 실시간 랭킹
-    const webtoon_lank = new Swiper('.lanking__slide-wrap', {
+    const webtoon_time_lank = new Swiper('.webtoon_time_lank', {
         slidesPerView: 3,
 		slidesPerColumn: 3,
 		slidesPerGroup: 9,
 		spaceBetween: 26,
         navigation: {
-            nextEl: ".lanking__slide-next",
-            prevEl: ".lanking__slide-prev",
+            nextEl: "#webtoon_time_lank .lanking__slide-next",
+            prevEl: "#webtoon_time_lank .lanking__slide-prev",
         },
         watchOverflow: true,
     });
@@ -80,6 +80,67 @@ $(document).ready(function(){
         navigation: {
             nextEl: ".book__slide-wrap.today .book__list-next",
             prevEl: ".book__slide-wrap.today .book__list-prev",
+        },
+        watchOverflow: true,
+    });
+
+    // 웹툰 실시간 랭킹
+    const webtoon_best = new Swiper('.webtoom-lank', {
+        slidesPerView: 3,
+		slidesPerColumn: 3,
+		slidesPerGroup: 9,
+		spaceBetween: 26,
+        navigation: {
+            nextEl: "#webtoom-lank .lanking__slide-next",
+            prevEl: "#webtoom-lank .lanking__slide-prev",
+        },
+        watchOverflow: true,
+    });
+
+    // 지금, 리디에서만 볼 수 있는 웹툰
+    const now_ridi_only_webtoon_lank = new Swiper('.book__slide-wrap.now_ridi_only', {
+        slidesPerView: 6,
+		spaceBetween: 6,
+        navigation: {
+            nextEl: ".book__slide-wrap.now_ridi_only .book__list-next",
+            prevEl: ".book__slide-wrap.now_ridi_only .book__list-prev",
+        },
+        watchOverflow: true,
+    });
+
+    // 매수 화수목엔 포인트 줍줍!
+    const point_webtoon_lank = new Swiper('.book__slide-wrap.point', {
+        slidesPerView: 6,
+		spaceBetween: 6,
+        navigation: {
+            nextEl: ".book__slide-wrap.point .book__list-next",
+            prevEl: ".book__slide-wrap.point .book__list-prev",
+        },
+        watchOverflow: true,
+    });
+
+    // 오직 리디에서만!
+
+    // 새로 나온 작품
+    const new_webtoon_lank = new Swiper('.book__slide-wrap.new', {
+        slidesPerView: 6,
+		spaceBetween: 6,
+        navigation: {
+            nextEl: ".book__slide-wrap.new .book__list-next",
+            prevEl: ".book__slide-wrap.new .book__list-prev",
+        },
+        watchOverflow: true,
+    });
+
+    // 이벤트 보러가기
+
+    // 늘 짜릿한 신작 #BL
+    const new_bl_webtoon_lank = new Swiper('.book__slide-wrap.new_bl', {
+        slidesPerView: 6,
+		spaceBetween: 6,
+        navigation: {
+            nextEl: ".book__slide-wrap.new_bl .book__list-next",
+            prevEl: ".book__slide-wrap.new_bl .book__list-prev",
         },
         watchOverflow: true,
     });

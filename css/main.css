@@ -85,3 +85,8 @@
 
 .book__slide-wrap .slider-prev,
 .book__slide-wrap .slider-next {top: 160px;}
+
+/* keyword - hash tag */
+.keyword-wrap {margin: 40px 0 30px; padding: 0 30px;}
+.keyword-inner {display: flex; align-items: center; gap: 8px;}
+.keyword-inner > a {padding: 6px 8px 7px; border: 1px solid #e6e6e6; border-radius: 3px; font-weight: 400; font-size: 16px; line-height: 19px; color: #141414;}
