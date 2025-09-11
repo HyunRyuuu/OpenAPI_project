@@ -11,7 +11,7 @@ $(document).ready(function(){
             prevEl: ".main__banner-prev",
         },
         autoplay: {
-            delay: 2500,
+            delay: 5000,
             disableOnInteraction: false,
         },
         watchOverflow: true,
@@ -97,6 +97,17 @@ $(document).ready(function(){
         watchOverflow: true,
     });
 
+    // 이벤트 보러가기
+    const event_banner = new Swiper('#event .event__banner__slide-wrap', {
+        slidesPerView: 3,
+		spaceBetween: 6,
+        navigation: {
+            nextEl: "#event .event__banner-next",
+            prevEl: "#event .event__banner-prev",
+        },
+        watchOverflow: true,
+    });
+
     // 지금, 리디에서만 볼 수 있는 웹툰
     const now_ridi_only_webtoon_lank = new Swiper('.book__slide-wrap.now_ridi_only', {
         slidesPerView: 6,
@@ -120,6 +131,15 @@ $(document).ready(function(){
     });
 
     // 오직 리디에서만!
+    const only_ridi = new Swiper('.only__ridi__slide-wrap', {
+        slidesPerView: 3,
+		spaceBetween: 6,
+        navigation: {
+            nextEl: ".only__ridi-wrap .only__ridi-next",
+            prevEl: ".only__ridi-wrap .only__ridi-prev",
+        },
+        watchOverflow: true,
+    });
 
     // 새로 나온 작품
     const new_webtoon_lank = new Swiper('.book__slide-wrap.new', {
@@ -132,7 +152,16 @@ $(document).ready(function(){
         watchOverflow: true,
     });
 
-    // 이벤트 보러가기
+    // 이벤트 보러가기-2
+    const event_banner_2 = new Swiper('#event-more .event__banner__slide-wrap', {
+        slidesPerView: 3,
+		spaceBetween: 6,
+        navigation: {
+            nextEl: "#event-more .event__banner-next",
+            prevEl: "#event-more .event__banner-prev",
+        },
+        watchOverflow: true,
+    });
 
     // 늘 짜릿한 신작 #BL
     const new_bl_webtoon_lank = new Swiper('.book__slide-wrap.new_bl', {
