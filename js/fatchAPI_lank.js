@@ -4,7 +4,7 @@ $(document).ready(function(){
         const params = new URLSearchParams({
             target: "title",
             query,
-            size: 8
+            size: 18
         });
 
         const url = `https://dapi.kakao.com/v3/search/book?${params}`;
@@ -28,14 +28,7 @@ $(document).ready(function(){
 
             const querise = [
                 { query: '만화', sectionId: 'webtoon_time_lank' },
-                { query: '로맨스', sectionId: 'weekly__list' },
                 { query: '웹툰', sectionId: 'webtoom-lank' },
-                { query: 'SF', sectionId: 'book_list_wait' },
-                { query: '자바스크립트', sectionId: 'book_list_today' },
-                { query: '에세이', sectionId: 'now_ridi_only' },
-                { query: '문학', sectionId: 'book_list_point' },
-                { query: '소설', sectionId: 'book_list_new' },
-                { query: 'BL', sectionId: 'book_list_new_bl' },
             ];
 
             for (const { query, sectionId } of querise ){
@@ -46,7 +39,7 @@ $(document).ready(function(){
                 // const mainBox = $(section).find('.lanking__slide');
 
                 const section = document.querySelector(`#${sectionId}`);
-                const mainBox = section.querySelectorAll(".book__slide");
+                const mainBox = section.querySelectorAll(".lanking__slide");
 
                 mainBox.forEach((box, i) => {
                     const doc = data.documents[i];

@@ -67,6 +67,7 @@
 .book__slide .img-wrap .ridi-only {display: flex; align-items: center; justify-content: center; position: absolute; top: 0; left: 0; width: 61px; height: 30px; border-radius: 4px 0; background: #000; ;}
 .book__slide .img-wrap .ridi-only svg {width: 49px; height: 16px;}
 .book__slide .img-wrap .adult {position: absolute; top: 6px; right: 6px; font-size: 24px;}
+.book__slide .img-wrap img {width: 100%; height: 100%;}
 .book__slide .img-wrap .bottom {display: flex; align-items: center; justify-content: center; position: absolute; bottom: 0; left: 0;}
 .book__slide .img-wrap .bottom div {display: flex; align-items: center; justify-content: center; width: 28px; height: 28px;}
 .book__slide .img-wrap .bottom div:first-child {border-radius: 0 0 0 4px;}
